@@ -33,11 +33,11 @@
     grid-row-gap: px(18);
 
     .bordered {
-      border: 1px solid #6BC5FA;
+      border: 2px solid #6bc5fa;
       border-radius: 10px;
       position: relative;
       box-shadow: 0 0 2px 0 #0e325f, inset 0 0 2px 0 #0e325f;
-      background:transparent;
+      background: #05253856;
       &::before {
         content: '';
         position: absolute;
@@ -46,10 +46,9 @@
         bottom: 0;
         top: 0;
         border-radius: 10px;
-        box-shadow: 20px 0 0 -19px #133661, -20px 0 0 -19px #0e325f,
-          0 20px 0 -19px #0e325f, 0 -20px 0 -19px #0e325f,
-          10px 0 0 -9px #164b88,
-          -10px 0 0 -9px #0d4483, 0 10px 0 -9px #0d4483, 0 -10px 0 -9px #0d4483;
+        box-shadow: 20px 0 0 -18px #133661, -20px 0 0 -18px #0e325f,
+          0 20px 0 -18px #0e325f, 0 -20px 0 -18px #0e325f, 10px 0 0 -8px #164b88,
+          -10px 0 0 -8px #0d4483, 0 10px 0 -8px #0d4483, 0 -10px 0 -8px #0d4483;
       }
     }
     > section {
@@ -60,29 +59,189 @@
       grid-area: box1;
       display: flex;
       flex-direction: column;
-      //均匀排列每个元素，首个元素放置于起点，末尾元素放置于终点
       justify-content: space-between;
+      .yuanliaokucun {
+        flex: 1;
+        width: px(500);
+        height: px(300);
+        margin: 0 auto;
+        display: grid;
+        grid-template:
+          'yl1 yl2' 150fr
+          'yl3 yl4' 150fr/250fr 250fr;
+        grid-column-gap: px(15);
+        grid-row-gap: px(15);
+        > .yuanliao1 {
+          grid-area: yl1;
+          position: relative;
+        }
+        > .yuanliao2 {
+          grid-area: yl2;
+        }
+        > .yuanliao3 {
+          grid-area: yl3;
+        }
+        > .yuanliao4 {
+          grid-area: yl4;
+        }
+      }
     }
     > .section2 {
       grid-area: box2;
     }
     > .section3 {
       grid-area: box3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     > .section4 {
       grid-area: box4;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     > .section5 {
       grid-area: box5;
     }
     > .section6 {
       grid-area: box6;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     > .section7 {
       grid-area: box7;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     > .section8 {
       grid-area: box8;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .deviceprocessing-t,
+    .yield,
+    .product-inventory,
+    .guanxi {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      h2 {
+        background: #196591;
+        color: #5dc2fe;
+        flex-shrink: 0;
+        border: 1px solid #0a5299;
+        border-radius: 0 0 px(20) px(20);
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        font-size: px(22);
+        line-height: px(24);
+        padding: px(10) px(28);
+        text-shadow: 0 0 px(3) white;
+      }
+      .chart {
+        flex: 1;
+        width: 100%;
+      }
+    }
+    .deviceprocessing-t {
+      height: 100%;
+      > table {
+        width: 100%;
+        margin: px(10) px(10);
+        border-collapse: collapse;
+        font-size: px(16);
+        th,
+        td {
+          border: 0px;
+          color: rgb(152, 195, 243);
+        }
+        thead {
+          th {
+            color: rgb(95, 166, 248);
+
+            height: px(50);
+            box-shadow: inset 0 0 px(50) 0 #196591;
+          }
+        }
+        tbody {
+          tr:nth-child(even) {
+            background: #143c53;
+          }
+          td {
+            height: px(50);
+            width: px(84);
+            //background: #3e85ad;
+          }
+        }
+      }
+    }
+    .yield {
+      display: flex;
+      flex-direction: column; //加上这两句居然解决了与上面部分间距的问题！
+      height: px(300);
+      .charts {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        padding: px(10);
+      }
+      &-饼图1 {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        .chart {
+          position: relative;
+          display: flex;
+          > .main {
+            flex: 1;
+          }
+          > .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #33a4fa;
+            font-size: px(30);
+            text-shadow: 0 0 px(20) #33a4fa;
+            font-weight: bold;
+          }
+        }
+        .legend {
+          height: px(20);
+          transform: translate(0, -150%);
+          font-size: px(20);
+          color: rgb(192, 217, 253);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+      }
+      // &-图2 {
+      //   width: px(290);
+      //   flex-shrink: 0; //保证图2不会被挤到，表示图2不进行灵活收缩
+      //   .legend {
+      //     justify-content: flex-start; //左对齐排列
+      //   }
+      // }
+      // &-图3 {
+      //   border: 1px solid #08397d;
+      //   width: 100%;
+      //   h3 {
+      //     font-size: px(20);
+      //     color: #7ab6db;
+      //     margin-top: px(6);
+      //   }
+      // }
+    }
+    .product-inventory {
+      height: px(300);
     }
   }
 }

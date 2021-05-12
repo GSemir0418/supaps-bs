@@ -1,25 +1,60 @@
 import React from 'react'
 import './Home.scss'
 import headerBg from '../img/header.png'
+import Chart2 from '../components/Chart2'
+import Chart3 from '../components/Chart3'
+import Chart4 from '../components/Chart4'
+import Chart5 from '../components/Chart5'
+import Chart6 from '../components/Chart6'
+// import Chart7 from '../components/Chart7'
+import Chart8 from '../components/Chart8'
+import Chart9 from '../components/Chart9'
 
 export default function Home () {
   return (
     <div className='home'>
-      
-        <header style={{ backgroundImage: `url(${headerBg})` }}>
-          SupAPS大屏展示
-        </header>
+      <header style={{ backgroundImage: `url(${headerBg})` }}>
+        SupAPS大屏展示
+      </header>
 
-        <main>
-          <section className=' bordered section1'></section>
-          <section className=' bordered section2'></section>
-          <section className=' bordered section3'></section>
-          <section className=' bordered section4'></section>
-          <section className=' bordered section5'></section>
-          <section className=' bordered section6'></section>
-          <section className=' bordered section7'></section>
-          <section className=' bordered section8'></section>
-        </main>
+      <main>
+        <section className='bordered section1'>
+          <div className='yuanliaokucun'>
+            <div className='yuanliao1'>
+                <span className="spin">绝对定位</span>
+                <span className="库存名称">绝对定位 参考text</span>
+                <span className="bordered 库存量">边框效果 大小固定 绝对定位</span>
+            </div>
+            <div className='yuanliao2'></div>
+            <div className='yuanliao3'></div>
+            <div className='yuanliao4'></div>
+          </div>
+        </section>
+        <section className='section2'>
+          <Chart2 />
+        </section>
+        <section className='section3'>
+          <div className='bordered yield'>
+            <h2>收率</h2>
+            <div className='charts'>
+              <Chart3 />
+              <Chart4 />
+              <Chart5 />
+            </div>
+          </div>
+        </section>
+        <section className='section4'>
+          <Chart6 />
+        </section>
+        <section className='section5'>
+          <Chart8 />
+        </section>
+        <section className='section6'>{/* <Chart7 /> */}</section>
+        <section className='bordered section7'></section>
+        <section className='section8'>
+          <Chart9 />
+        </section>
+      </main>
     </div>
   )
 }

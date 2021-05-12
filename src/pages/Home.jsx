@@ -14,7 +14,7 @@ export default function Home () {
   return (
     <div className='home'>
       <header style={{ backgroundImage: `url(${headerBg})` }}>
-        SupAPS大屏展示
+        supAPS大屏展示
       </header>
 
       <main>

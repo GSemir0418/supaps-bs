@@ -14,7 +14,7 @@ export default function Chart4 () {
       series: [
         {
           ...BaseEchartsOptions,
-          color: ['#33A4FA', '#083c5a'],
+          color: ['#ffb248', '#083c5a'],
           xAxis: { show: false },
           yAxis: { show: false },
           legend: { show: false },

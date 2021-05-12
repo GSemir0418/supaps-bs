@@ -60,11 +60,11 @@ export default function Chart9 () {
             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
               {
                 offset: 0,
-                color: '#414a9f'
+                color: '#ebdba4'
               },
               {
                 offset: 1,
-                color: '#1b1d52'
+                color: '#eb8146'
               }
             ])
           }

@@ -12,11 +12,13 @@
     height: px(80);
     background-size: cover;
     text-align: center;
-    font-size: px(30);
-    color: #5dc2fe;
+    font-size: px(50);
+    // color: #5dc2fe;
+    color:#cce8f8;
     padding: px(18);
-    text-shadow: 0 0 px(30) #69baf8;
+    // text-shadow: 0 0 px(30) #69baf8;
     font-weight: bold;
+    animation: shining 0.4s alternate infinite;
   }
   > main {
     width: px(1920);
@@ -126,14 +128,15 @@
     .deviceprocessing-t,
     .yield,
     .product-inventory,
-    .guanxi {
+    .guanxi,
+    .benefit {
       display: flex;
       flex-direction: column;
       text-align: center;
       align-items: center;
       h2 {
         background: #196591;
-        color: #aad0e6;
+        color: #d6e4ec;
         flex-shrink: 0;
         border: 1px solid #0a5299;
         border-radius: 0 0 px(20) px(20);
@@ -152,10 +155,10 @@
     .deviceprocessing-t {
       height: 100%;
       > table {
-        width: 100%;
-        margin: px(10) px(10);
+        width: 96%;
+        margin: px(10) px(50);
         border-collapse: collapse;
-        font-size: px(16);
+        font-size: px(20);
         th,
         td {
           border: 0px;
@@ -242,6 +245,9 @@
     }
     .product-inventory {
       height: px(300);
+    }
+    .benefit{
+      height:px(240)
     }
   }
 }

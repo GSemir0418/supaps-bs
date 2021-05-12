@@ -1,20 +1,20 @@
 import React from 'react'
 import './Home.scss'
 import headerBg from '../img/header.png'
-import Chart2 from '../components/Chart2'
-import Chart3 from '../components/Chart3'
-import Chart4 from '../components/Chart4'
-import Chart5 from '../components/Chart5'
-import Chart6 from '../components/Chart6'
+import Chart2 from '../components/DeviceProcessingTable'
+import Chart3 from '../components/Yield/PieChart1'
+import Chart4 from '../components/Yield/PieChart2'
+import Chart5 from '../components/Yield/PieChart3'
+import Chart6 from '../components/ProductInventoryChart/BarChart'
 // import Chart7 from '../components/Chart7'
-import Chart8 from '../components/Chart8'
-import Chart9 from '../components/Chart9'
+import Chart8 from '../components/ProductSalesTable'
+import Chart9 from '../components/Benefit/LineChart'
 
 export default function Home () {
   return (
     <div className='home'>
       <header style={{ backgroundImage: `url(${headerBg})` }}>
-        supAPS大屏展示
+        supAPS
       </header>
 
       <main>

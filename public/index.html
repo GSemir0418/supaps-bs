@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="ch">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <title>supAPS大屏展示</title>
+    <script>
+      const clientWidth = document.documentElement.clientWidth
+      const clientHeight = document.documentElement.clientHeight
+      window.pageWidth =
+        clientWidth / clientHeight > 16 / 9
+          ? clientHeight * (16 / 9)
+          : clientWidth
+      const pageHeight = pageWidth / (16 / 9)
+      document.write(`<style>html{font-size:${pageWidth / 100}px</style>`)
+    </script>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
-  <title>supAPS大屏展示</title>
-  <script>
-    const clientWidth = document.documentElement.clientWidth
-    const clientHeight = document.documentElement.clientHeight
-    const pageWidth = (clientWidth / clientHeight) > 16 / 9 ? clientHeight * (16 / 9) : clientWidth
-    const pageHeight = pageWidth / (16 / 9)
-    document.write(`<style>html{
-        font-size: ${pageWidth / 100} px
-        </style>`)
-  </script>
-</head>
-
-<body>
-  <div id="root"></div>
-  <script>
-    root.style.width = pageWidth + 'px'
-    root.style.height = pageHeight + 'px'
-    root.style.marginTop = (clientHeight - pageHeight) / 2 + 'px'
-  </script>
-</body>
-
+  <body>
+    <div id="root"></div>
+    <script>
+      root.style.height = pageHeight + 'px'
+      root.style.marginTop = (clientHeight - pageHeight) / 2 + 'px'
+    </script>
+  </body>
 </html>

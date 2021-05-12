@@ -1,5 +1,6 @@
 import React from 'react'
 import Home from './pages/Home'
+import './shared/style.scss'
 
 function App() {
   return (

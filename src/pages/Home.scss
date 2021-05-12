@@ -1,0 +1,88 @@
+@import '../shared/helper';
+
+.home {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: '../img/bg01.png';
+  > header {
+    width: px(1920);
+    margin: 0 auto;
+    height: px(80);
+    background-size: cover;
+    text-align: center;
+    font-size: px(30);
+    color: #5dc2fe;
+    padding: px(18);
+    text-shadow: 0 0 px(30) #69baf8;
+    font-weight: bold;
+  }
+  > main {
+    width: px(1920);
+    height: px(920);
+    margin: 0 auto; //main元素居中
+    padding: px(20);
+    flex: 1;
+    display: grid; //grid布局
+    grid-template:
+      'box1 box2 box3 box4' 300fr
+      'box5 box6 box6 box7' 290fr
+      'box5 box6 box6 box8' 290fr / 500fr 490fr 490fr 400fr;
+    grid-column-gap: px(18);
+    grid-row-gap: px(18);
+
+    .bordered {
+      border: 1px solid #6BC5FA;
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 0 0 2px 0 #0e325f, inset 0 0 2px 0 #0e325f;
+      background:transparent;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        border-radius: 10px;
+        box-shadow: 20px 0 0 -19px #133661, -20px 0 0 -19px #0e325f,
+          0 20px 0 -19px #0e325f, 0 -20px 0 -19px #0e325f,
+          10px 0 0 -9px #164b88,
+          -10px 0 0 -9px #0d4483, 0 10px 0 -9px #0d4483, 0 -10px 0 -9px #0d4483;
+      }
+    }
+    > section {
+      height: 100%;
+      text-align: center;
+    }
+    > .section1 {
+      grid-area: box1;
+      display: flex;
+      flex-direction: column;
+      //均匀排列每个元素，首个元素放置于起点，末尾元素放置于终点
+      justify-content: space-between;
+    }
+    > .section2 {
+      grid-area: box2;
+    }
+    > .section3 {
+      grid-area: box3;
+    }
+    > .section4 {
+      grid-area: box4;
+    }
+    > .section5 {
+      grid-area: box5;
+    }
+    > .section6 {
+      grid-area: box6;
+    }
+    > .section7 {
+      grid-area: box7;
+    }
+    > .section8 {
+      grid-area: box8;
+    }
+  }
+}

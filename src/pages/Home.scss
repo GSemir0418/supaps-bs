@@ -14,7 +14,7 @@
     text-align: center;
     font-size: px(50);
     // color: #5dc2fe;
-    color:#cce8f8;
+    color: #cce8f8;
     padding: px(18);
     // text-shadow: 0 0 px(30) #69baf8;
     font-weight: bold;
@@ -62,7 +62,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      .yuanliaokucun {
+      .product-inventory {
         flex: 1;
         width: px(500);
         height: px(300);
@@ -73,9 +73,43 @@
           'yl3 yl4' 150fr/250fr 250fr;
         grid-column-gap: px(15);
         grid-row-gap: px(15);
-        > .yuanliao1 {
+        .yuanliao1,
+        .yuanliao2,
+        .yuanliao3,
+        .yuanliao4 {
           grid-area: yl1;
           position: relative;
+          display: flex;
+          flex-direction: column; //加上这两句居然解决了与上面部分间距的问题！
+          height: px(142.5);
+          .yuanliao {
+            position: absolute;
+            top: px(20);
+            left: px(10);
+            width: px(90);
+            height: px(90);
+          }
+          .spin {
+            background: transparent;
+            border-radius: 50%;
+            box-shadow: inset px(5) px(-5) rgb(248, 228, 231);
+            animation: spin 2s linear infinite;
+            filter: blur(px(3));
+          }
+          .inventory-title,
+          .inventory-value {
+            color: #cedffd;
+            font-size: px(20);
+            text-shadow: 0 0 px(20) #33a4fa;
+            font-weight: bold;
+            text-align: center;
+            line-height: px(90);
+          }
+          .inventory-value {
+            left: px(100);
+            width: auto;
+            color:rgb(156, 231, 253);
+          }
         }
         > .yuanliao2 {
           grid-area: yl2;
@@ -246,8 +280,8 @@
     .product-inventory {
       height: px(300);
     }
-    .benefit{
-      height:px(240)
+    .benefit {
+      height: px(240);
     }
   }
 }

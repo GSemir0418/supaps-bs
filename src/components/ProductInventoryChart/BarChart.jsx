@@ -22,9 +22,6 @@ export default function Chart6 () {
           '兰州新区',
           '兰州新区',
           '兰州新区',
-          '兰州新区',
-          '兰州新区',
-          '兰州新区',
           '兰州新区'
         ],
         axisLabel: {
@@ -46,10 +43,52 @@ export default function Chart6 () {
           fontSize: px(12)
         }
       },
+      color: ['#ffb248'],
       series: [
         {
           type: 'bar',
-          data: [5, 20, 36, 10, 10, 20, 23, 25, 12]
+          data: [
+            {
+              value: 150,
+              itemStyle: {
+                color: '#3fb1e3'
+              }
+            },
+            {
+              value: 110,
+              itemStyle: {
+                color: '#6be6c1'
+              }
+            },
+            {
+              value: 30,
+              itemStyle: {
+                color: '#626c91'
+              }
+            },
+            {
+              value: 170,
+              itemStyle: {
+                color: '#a0a7e6'
+              }
+            },
+            {
+              value: 80,
+              itemStyle: {
+                color: '#c4ebad'
+              }
+            },
+            {
+              value: 200,
+              itemStyle: {
+                color: '#96dee8'
+              }
+            },
+          ],
+          showBackground: true,
+          backgroundStyle: {
+            color: '#ffb24820'
+          }
         }
       ]
     }

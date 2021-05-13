@@ -6,7 +6,7 @@ import PieChart1 from '../components/Yield/PieChart1'
 import PieChart2 from '../components/Yield/PieChart2'
 import PieChart3 from '../components/Yield/PieChart3'
 import BarChart from '../components/ProductInventoryChart/BarChart'
-// import Chart7 from '../components/Chart7'
+import Chart7 from '../components/Chart7'
 import ProductSalesTable from '../components/ProductSalesTable'
 import LineChart from '../components/Benefit/LineChart'
 
@@ -67,12 +67,15 @@ export default function Home () {
         <section className='section5'>
           <ProductSalesTable />
         </section>
-        <section className='section6'>{/* <Chart7 /> */}</section>
+        <section className='section6'>
+          <Chart7 />
+        </section>
         <section className='bordered section7'></section>
         <section className='section8'>
           <LineChart />
         </section>
       </main>
+      <footer>创新产品开发部门 郭森权</footer>
     </div>
   )
 }

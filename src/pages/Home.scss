@@ -20,6 +20,18 @@
     font-weight: bold;
     animation: shining 0.4s alternate infinite;
   }
+  > footer {
+    height: px(80);
+    margin-top: px(1) 0 1px;
+    border: px(3) solid #0d2d59;
+    border-radius: 4px;
+    background: #062c42f1;
+    font-size: px(16);
+    color: rgb(178, 204, 243);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   > main {
     width: px(1920);
     height: px(920);
@@ -92,7 +104,7 @@
           .spin {
             background: transparent;
             border-radius: 50%;
-            box-shadow: inset px(5) px(-5) rgb(248, 228, 231);
+            box-shadow: inset px(5) px(-5) rgb(255, 170, 13);
             animation: spin 2s linear infinite;
             filter: blur(px(3));
           }
@@ -108,7 +120,7 @@
           .inventory-value {
             left: px(100);
             width: auto;
-            color:rgb(156, 231, 253);
+            color: rgb(156, 231, 253);
           }
         }
         > .yuanliao2 {
@@ -162,7 +174,7 @@
     .deviceprocessing-t,
     .yield,
     .product-inventory,
-    .guanxi,
+    .diagram,
     .benefit {
       display: flex;
       flex-direction: column;
@@ -282,6 +294,9 @@
     }
     .benefit {
       height: px(240);
+    }
+    .diagram {
+      height: px(580);
     }
   }
 }

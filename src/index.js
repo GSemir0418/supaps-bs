@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import './shared/style.scss';
 import App from './App';
 import ReactParticleLine from 'react-particle-line';
+import axios from './plugins/axios'
 
+window.axios = axios;
 ReactDOM.render(
   <React.StrictMode>
     <ReactParticleLine

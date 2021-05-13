@@ -7,23 +7,15 @@ export default function Chart2 () {
       <table>
         <thead>
           <tr>
-            <th>2014</th>
-            <th>1</th>
-            <th>2</th>
-            <th>3</th>
-            <th>4</th>
-            <th>5</th>
-            <th>6</th>
-            <th>7</th>
+            <th>装置</th>
+            <th>加工量</th>
+            <th>负荷</th>
+            <th>产量</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>2015</td>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
             <td>2</td>
             <td>2</td>
             <td>2</td>
@@ -33,17 +25,9 @@ export default function Chart2 () {
             <td>2</td>
             <td>2</td>
             <td>2</td>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
           </tr>
           <tr>
             <td>2017</td>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
             <td>2</td>
             <td>2</td>
             <td>2</td>

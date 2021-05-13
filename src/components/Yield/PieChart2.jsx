@@ -44,7 +44,7 @@ export default function Chart4 () {
     myChart.setOption(option)
   }, [])
   return (
-    <div className='yield-饼图1'>
+    <div className='yield-piechart'>
       <div className='chart'>
         <div ref={divRef} className='main' />
         <div className='text'>50%</div>

@@ -77,7 +77,6 @@
       .product-inventory {
         flex: 1;
         width: px(500);
-        height: px(300);
         margin: 0 auto;
         display: grid;
         grid-template:
@@ -104,9 +103,17 @@
           .spin {
             background: transparent;
             border-radius: 50%;
-            box-shadow: inset px(5) px(-5) rgb(255, 170, 13);
-            animation: spin 2s linear infinite;
-            filter: blur(px(3));
+            box-shadow: inset px(5) px(-2) rgb(104, 164, 255);
+            animation: spin 1s linear infinite;
+            filter: blur(px(2));
+          }
+          .spin1 {
+            box-shadow: inset px(5) px(-2) rgb(120, 240, 248);
+            animation: spin1 1s linear infinite;
+            top: px(30);
+            left: px(20);
+            width: px(70);
+            height: px(70);
           }
           .inventory-title,
           .inventory-value {
@@ -175,7 +182,8 @@
     .yield,
     .product-inventory,
     .diagram,
-    .benefit {
+    .benefit,
+    .inventory-cost {
       display: flex;
       flex-direction: column;
       text-align: center;
@@ -204,7 +212,7 @@
         width: 96%;
         margin: px(10) px(50);
         border-collapse: collapse;
-        font-size: px(20);
+        font-size: px(18);
         th,
         td {
           border: 0px;
@@ -240,7 +248,7 @@
         display: flex;
         padding: px(10);
       }
-      &-饼图1 {
+      &-piechart {
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -272,31 +280,37 @@
           flex-wrap: wrap;
         }
       }
-      // &-图2 {
-      //   width: px(290);
-      //   flex-shrink: 0; //保证图2不会被挤到，表示图2不进行灵活收缩
-      //   .legend {
-      //     justify-content: flex-start; //左对齐排列
-      //   }
-      // }
-      // &-图3 {
-      //   border: 1px solid #08397d;
-      //   width: 100%;
-      //   h3 {
-      //     font-size: px(20);
-      //     color: #7ab6db;
-      //     margin-top: px(6);
-      //   }
-      // }
     }
     .product-inventory {
       height: px(300);
     }
     .benefit {
-      height: px(240);
+      height: px(290);
     }
     .diagram {
       height: px(580);
+    }
+    .inventory-cost {
+      height: px(272);
+      .inventory-cost-t {
+        width: 70%;
+        margin: px(10) px(50);
+        border-collapse: collapse;
+        font-size: px(18);
+        td {
+          border: 0px;
+          color: rgb(152, 195, 243);
+          height: px(40);
+          width: px(84);
+        }
+        td:nth-child(odd) {
+          box-shadow: inset 0 0 px(50) 0 #19659191;}
+        td:nth-child(even) {
+          font-family: 'LCdd';
+          font-size: px(25);
+          color:rgb(253, 215, 133)
+        }
+      }
     }
   }
 }

@@ -24,6 +24,10 @@ code {
 *::after {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'LCdd';
+  src: url('../font/LCdd.TTF');
+}
 body {
   font-family: $font-hei;
   font-size: 16px;

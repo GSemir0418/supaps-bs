@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react'
 import * as echarts from 'echarts'
 import { px } from '../../shared/px'
 
-export default function Chart9 () {
+export default function LineChart () {
   const divRef = useRef(null)
   useEffect(() => {
     var myChart = echarts.init(divRef.current)

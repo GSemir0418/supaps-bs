@@ -179,6 +179,7 @@
     }
 
     .deviceprocessing-t,
+    .product-sales-t,
     .yield,
     .product-inventory,
     .diagram,
@@ -206,8 +207,8 @@
         width: 100%;
       }
     }
-    .deviceprocessing-t { 
-      height: 100%;
+    .deviceprocessing-t,
+    .product-sales-t {
       > table {
         width: 96%;
         margin: px(10) px(50);
@@ -219,6 +220,8 @@
           color: rgb(152, 195, 243);
         }
         thead {
+          z-index: 999;
+          pointer-events: none;
           th {
             color: rgb(95, 166, 248);
 
@@ -237,6 +240,16 @@
           }
         }
       }
+      table::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    .deviceprocessing-t {
+      height: px(300);
+      overflow: hidden;
+    }
+    .product-sales-t {
+      height: 100%;
     }
     .yield {
       display: flex;
@@ -304,11 +317,12 @@
           width: px(84);
         }
         td:nth-child(odd) {
-          box-shadow: inset 0 0 px(50) 0 #19659191;}
+          box-shadow: inset 0 0 px(50) 0 #19659191;
+        }
         td:nth-child(even) {
           font-family: 'LCdd';
           font-size: px(25);
-          color:rgb(253, 215, 133)
+          color: rgb(253, 215, 133);
         }
       }
     }

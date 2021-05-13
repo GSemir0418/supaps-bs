@@ -1,9 +1,5 @@
 // import React from 'react';
 import axios from 'axios';
-import { createHashHistory } from 'history';
-import {Modal} from 'sup-ui';
-import store from '../store';
-
 import baseUrl from './baseUrl';
 
 // Full config:  https://github.com/axios/axios#request-config
@@ -15,7 +11,6 @@ import baseUrl from './baseUrl';
  * @type {string}
  */
 // let baseUrl = "192.168.95.147:18888/";
-const history = createHashHistory();
 //
 const config = {
   // baseURL: process.env.baseURL || process.env.apiUrl || ""
@@ -32,9 +27,9 @@ _axios.interceptors.request.use(
   // eslint-disable-next-line no-shadow
   (config) => {
     // Do something before request is sent
-    if (config.url.lastIndexOf('msService') === -1 && !config.headers.Authorization && store.tokenStore.isLogin) {
-      config.headers.common.authorization = `bearer ${store.tokenStore.tokenData.access_token}`;
-    }
+    // if (config.url.lastIndexOf('msService') === -1 && !config.headers.Authorization && store.tokenStore.isLogin) {
+    //   config.headers.common.authorization = `bearer ${store.tokenStore.tokenData.access_token}`;
+    // }
 
     return config;
   },
@@ -63,13 +58,13 @@ _axios.interceptors.response.use(
   },
   (error) => {
     // Do something with response error
-    if (error.toString().includes('500')) {
-      Modal.warning({
-        title: '警告！',
-        content: '服务器错误'
-      });
-      return Promise.reject(error);
-    }
+    // if (error.toString().includes('500')) {
+    //   // Modal.warning({
+    //   //   title: '警告！',
+    //   //   content: '服务器错误'
+    //   // });
+    //   return Promise.reject(error);
+    // }
     // if (error.toString().includes('401') && store.tokenStore.isLogin) {
     //   if (!isRefreshing) {
     //     isRefreshing = true;
@@ -172,5 +167,4 @@ _axios.interceptors.response.use(
   }
 );
 
-export {history};
 export default _axios;

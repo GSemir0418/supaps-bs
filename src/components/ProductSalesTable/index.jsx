@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Chart8 () {
   return (
-    <div className='bordered deviceprocessing-t'>
+    <div className='bordered product-sales-t'>
       <h2>产品销售表</h2>
       <table>
         <thead>

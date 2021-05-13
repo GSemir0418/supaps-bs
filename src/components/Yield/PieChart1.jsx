@@ -4,6 +4,7 @@ import { px } from '../../shared/px'
 import { BaseEchartsOptions } from '../../shared/base-echarts-options'
 
 export default function Chart3 () {
+  
   const divRef = useRef(null)
   useEffect(() => {
     var myChart = echarts.init(divRef.current)

@@ -14,9 +14,9 @@ export default function LineChart () {
         color: '#79839E'
       },
       grid: {
-        x: px(45),
+        x: px(60),
         y: px(40),
-        x2: px(20),
+        x2: px(25),
         y2: px(40)
       },
       xAxis: {

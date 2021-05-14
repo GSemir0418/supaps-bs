@@ -1,6 +1,7 @@
 @import '../../shared/helper';
 
 .product-sales-t {
+  height: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -18,8 +19,6 @@
     padding: px(10) px(28);
     text-shadow: 0 0 px(2) rgb(218, 210, 210);
   }
-}
-.product-sales-t {
   > table {
     width: 96%;
     margin: px(10) px(50);
@@ -51,8 +50,4 @@
   table::-webkit-scrollbar {
     display: none;
   }
-}
-
-.product-sales-t {
-  height: 100%;
 }

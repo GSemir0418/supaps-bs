@@ -3,6 +3,7 @@
 .product-inventory {
   flex: 1;
   width: px(500);
+  height: px(300);
   margin: 0 auto;
   display: grid;
   grid-template:
@@ -65,10 +66,6 @@
   > .yuanliao4 {
     grid-area: yl4;
   }
-}
-.product-inventory {
-  text-align: center;
-  align-items: center;
   h2 {
     background: #196591;
     color: #d6e4ec;
@@ -86,7 +83,4 @@
     flex: 1;
     width: 100%;
   }
-}
-.product-inventory {
-  height: px(300);
 }

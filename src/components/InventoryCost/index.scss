@@ -1,6 +1,7 @@
 @import '../../shared/helper';
 
 .inventory-cost {
+  height: px(272);
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -22,10 +23,6 @@
     flex: 1;
     width: 100%;
   }
-}
-
-.inventory-cost {
-  height: px(272);
   .inventory-cost-t {
     width: 70%;
     margin: px(10) px(50);

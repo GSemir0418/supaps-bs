@@ -5,6 +5,7 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
+  height: px(290);
   h2 {
     background: #196591;
     color: #d6e4ec;
@@ -22,7 +23,4 @@
     flex: 1;
     width: 100%;
   }
-}
-.benefit {
-  height: px(290);
 }

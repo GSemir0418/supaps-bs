@@ -31,6 +31,7 @@ code {
 body {
   font-family: $font-hei;
   font-size: 16px;
+  overflow: hidden;//修改出现滚动条的bug
 }
 
 #root{

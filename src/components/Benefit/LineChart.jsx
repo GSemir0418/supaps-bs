@@ -22,7 +22,7 @@ export default function LineChart () {
       xAxis: {
         type: 'category',
         boundaryGap: false,
-        data: data.map(i=>i.name),
+        data: data.map(i=>i.month),
         splitLine: { show: true, lineStyle: { color: '#073E78' } },
         axisTick: { show: false },
         axisLine: { show: false }
@@ -42,6 +42,9 @@ export default function LineChart () {
           data: data.map(i=>i.value),
           symbol: 'circle',
           symbolSize: px(12),
+          itemStyle:{
+            color:'#eedd78'
+          },
           lineStyle: { width: px(2) },
           areaStyle: {
             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
@@ -64,21 +67,21 @@ export default function LineChart () {
   useEffect(() => {
     setInterval(() => {
       const newData = [
-        { time: '1', value: Math.random() },
-        { time: '2', value: Math.random() },
-        { time: '3', value: Math.random() },
-        { time: '4', value: Math.random() },
-        { time: '5', value: Math.random() },
-        { time: '6', value: Math.random() },
-        { time: '7', value: Math.random() },
-        { time: '8', value: Math.random() },
-        { time: '9', value: Math.random() },
-        { time: '10', value: Math.random() },
-        { time: '11', value: Math.random() },
-        { time: '12', value: Math.random() }
+        { month: '1', value: Math.random() },
+        { month: '2', value: Math.random() },
+        { month: '3', value: Math.random() },
+        { month: '4', value: Math.random() },
+        { month: '5', value: Math.random() },
+        { month: '6', value: Math.random() },
+        { month: '7', value: Math.random() },
+        { month: '8', value: Math.random() },
+        { month: '9', value: Math.random() },
+        { month: '10', value: Math.random() },
+        { month: '11', value: Math.random() },
+        { month: '12', value: Math.random() }
       ]
       renderMyChart(newData)
-    }, 1500)
+    }, 2000)
   }, [])
   //初始化数据
   useEffect(() => {

@@ -2,8 +2,9 @@ import React, { useRef, useEffect } from 'react'
 import * as echarts from 'echarts'
 import { px } from '../../shared/px'
 import { BaseEchartsOptions } from '../../shared/base-echarts-options'
+import './index.scss';
 
-export default function Chart6 () {
+export default function ProductInventoryChart () {
   const divRef = useRef(null)
   useEffect(() => {
     var myChart = echarts.init(divRef.current)
@@ -95,7 +96,7 @@ export default function Chart6 () {
     myChart.setOption(options)
   }, [])
   return (
-    <div className='bordered product-inventory'>
+    <div className='bordered product-inventory-chart'>
       <h2>产品库存</h2>
       <div ref={divRef} className='chart'></div>
     </div>

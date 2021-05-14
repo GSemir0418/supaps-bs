@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import * as echarts from 'echarts'
 import { px } from '../../shared/px'
 import { BaseEchartsOptions } from '../../shared/base-echarts-options'
-
+import './index.scss'
 export default function Chart3 () {
   
   const divRef = useRef(null)

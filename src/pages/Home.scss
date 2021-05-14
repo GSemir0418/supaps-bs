@@ -68,263 +68,33 @@
     > section {
       height: 100%;
       text-align: center;
-    }
-    > .section1 {
-      grid-area: box1;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      .product-inventory {
-        flex: 1;
-        width: px(500);
-        margin: 0 auto;
-        display: grid;
-        grid-template:
-          'yl1 yl2' 150fr
-          'yl3 yl4' 150fr/250fr 250fr;
-        grid-column-gap: px(15);
-        grid-row-gap: px(15);
-        .yuanliao1,
-        .yuanliao2,
-        .yuanliao3,
-        .yuanliao4 {
-          grid-area: yl1;
-          position: relative;
-          display: flex;
-          flex-direction: column; //加上这两句居然解决了与上面部分间距的问题！
-          height: px(142.5);
-          .yuanliao {
-            position: absolute;
-            top: px(20);
-            left: px(10);
-            width: px(90);
-            height: px(90);
-          }
-          .spin {
-            background: transparent;
-            border-radius: 50%;
-            box-shadow: inset px(5) px(-2) rgb(104, 164, 255);
-            animation: spin 1s linear infinite;
-            filter: blur(px(2));
-          }
-          .spin1 {
-            box-shadow: inset px(5) px(-2) rgb(120, 240, 248);
-            animation: spin1 1s linear infinite;
-            top: px(30);
-            left: px(20);
-            width: px(70);
-            height: px(70);
-          }
-          .inventory-title,
-          .inventory-value {
-            color: #cedffd;
-            font-size: px(20);
-            text-shadow: 0 0 px(20) #33a4fa;
-            font-weight: bold;
-            text-align: center;
-            line-height: px(90);
-          }
-          .inventory-value {
-            left: px(100);
-            width: auto;
-            color: rgb(156, 231, 253);
-          }
-        }
-        > .yuanliao2 {
-          grid-area: yl2;
-        }
-        > .yuanliao3 {
-          grid-area: yl3;
-        }
-        > .yuanliao4 {
-          grid-area: yl4;
-        }
-      }
+    }
+    > .section1 {
+      grid-area: box1;
     }
     > .section2 {
       grid-area: box2;
     }
     > .section3 {
       grid-area: box3;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
     > .section4 {
       grid-area: box4;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
     > .section5 {
       grid-area: box5;
     }
     > .section6 {
       grid-area: box6;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
     > .section7 {
       grid-area: box7;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
     > .section8 {
       grid-area: box8;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .deviceprocessing-t,
-    .product-sales-t,
-    .yield,
-    .product-inventory,
-    .diagram,
-    .benefit,
-    .inventory-cost {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      h2 {
-        background: #196591;
-        color: #d6e4ec;
-        flex-shrink: 0;
-        border: 1px solid #0a5299;
-        border-radius: 0 0 px(20) px(20);
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
-        font-size: px(22);
-        line-height: px(24);
-        padding: px(10) px(28);
-        text-shadow: 0 0 px(2) rgb(218, 210, 210);
-      }
-      .chart {
-        flex: 1;
-        width: 100%;
-      }
-    }
-    .deviceprocessing-t,
-    .product-sales-t {
-      > table {
-        width: 96%;
-        margin: px(10) px(50);
-        border-collapse: collapse;
-        font-size: px(18);
-        th,
-        td {
-          border: 0px;
-          color: rgb(152, 195, 243);
-        }
-        thead {
-          z-index: 999;
-          pointer-events: none;
-          th {
-            color: rgb(95, 166, 248);
-
-            height: px(50);
-            box-shadow: inset 0 0 px(50) 0 #196591;
-          }
-        }
-        tbody {
-          tr:nth-child(even) {
-            background: #143c53;
-          }
-          td {
-            height: px(50);
-            width: px(84);
-            //background: #3e85ad;
-          }
-        }
-      }
-      table::-webkit-scrollbar {
-        display: none;
-      }
-    }
-    .deviceprocessing-t {
-      height: px(300);
-      overflow: hidden;
-    }
-    .product-sales-t {
-      height: 100%;
-    }
-    .yield {
-      display: flex;
-      flex-direction: column; //加上这两句居然解决了与上面部分间距的问题！
-      height: px(300);
-      .charts {
-        width: 100%;
-        flex: 1;
-        display: flex;
-        padding: px(10);
-      }
-      &-piechart {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        .chart {
-          position: relative;
-          display: flex;
-          > .main {
-            flex: 1;
-          }
-          > .text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #33a4fa;
-            font-size: px(30);
-            text-shadow: 0 0 px(20) #33a4fa;
-            font-weight: bold;
-          }
-        }
-        .legend {
-          height: px(20);
-          transform: translate(0, -150%);
-          font-size: px(20);
-          color: rgb(192, 217, 253);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
-      }
-    }
-    .product-inventory {
-      height: px(300);
-    }
-    .benefit {
-      height: px(290);
-    }
-    .diagram {
-      height: px(580);
-    }
-    .inventory-cost {
-      height: px(272);
-      .inventory-cost-t {
-        width: 70%;
-        margin: px(10) px(50);
-        border-collapse: collapse;
-        font-size: px(18);
-        td {
-          border: 0px;
-          color: rgb(152, 195, 243);
-          height: px(40);
-          width: px(84);
-        }
-        td:nth-child(odd) {
-          box-shadow: inset 0 0 px(50) 0 #19659191;
-        }
-        td:nth-child(even) {
-          font-family: 'LCdd';
-          font-size: px(25);
-          color: rgb(253, 215, 133);
-        }
-      }
     }
   }
 }

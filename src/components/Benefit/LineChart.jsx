@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import * as echarts from 'echarts'
 import { px } from '../../shared/px'
+import './index.scss'
 
 export default function LineChart () {
   const divRef = useRef(null)

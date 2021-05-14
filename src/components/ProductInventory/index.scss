@@ -1,0 +1,92 @@
+@import '../../shared/helper';
+
+.product-inventory {
+  flex: 1;
+  width: px(500);
+  margin: 0 auto;
+  display: grid;
+  grid-template:
+    'yl1 yl2' 150fr
+    'yl3 yl4' 150fr/250fr 250fr;
+  grid-column-gap: px(15);
+  grid-row-gap: px(15);
+  .yuanliao1,
+  .yuanliao2,
+  .yuanliao3,
+  .yuanliao4 {
+    grid-area: yl1;
+    position: relative;
+    display: flex;
+    flex-direction: column; //加上这两句居然解决了与上面部分间距的问题！
+    height: px(142.5);
+    .yuanliao {
+      position: absolute;
+      top: px(20);
+      left: px(10);
+      width: px(90);
+      height: px(90);
+    }
+    .spin {
+      background: transparent;
+      border-radius: 50%;
+      box-shadow: inset px(5) px(-2) rgb(104, 164, 255);
+      animation: spin 1s linear infinite;
+      filter: blur(px(2));
+    }
+    .spin1 {
+      box-shadow: inset px(5) px(-2) rgb(120, 240, 248);
+      animation: spin1 1s linear infinite;
+      top: px(30);
+      left: px(20);
+      width: px(70);
+      height: px(70);
+    }
+    .inventory-title,
+    .inventory-value {
+      color: #cedffd;
+      font-size: px(20);
+      text-shadow: 0 0 px(20) #33a4fa;
+      font-weight: bold;
+      text-align: center;
+      line-height: px(90);
+    }
+    .inventory-value {
+      left: px(100);
+      width: auto;
+      color: rgb(156, 231, 253);
+    }
+  }
+  > .yuanliao2 {
+    grid-area: yl2;
+  }
+  > .yuanliao3 {
+    grid-area: yl3;
+  }
+  > .yuanliao4 {
+    grid-area: yl4;
+  }
+}
+.product-inventory {
+  text-align: center;
+  align-items: center;
+  h2 {
+    background: #196591;
+    color: #d6e4ec;
+    flex-shrink: 0;
+    border: 1px solid #0a5299;
+    border-radius: 0 0 px(20) px(20);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-size: px(22);
+    line-height: px(24);
+    padding: px(10) px(28);
+    text-shadow: 0 0 px(2) rgb(218, 210, 210);
+  }
+  .chart {
+    flex: 1;
+    width: 100%;
+  }
+}
+.product-inventory {
+  height: px(300);
+}

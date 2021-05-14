@@ -15,13 +15,20 @@ export default function Chart4 () {
       series: [
         {
           ...BaseEchartsOptions,
-          color: ['#ffb248', '#083c5a'],
+          color: [
+            new echarts.graphic.LinearGradient(1, 0, 0, 1, [
+              { offset: 0, color: '#2f65f0' },
+
+              { offset: 1, color: '#9608ed' }
+            ]),
+            '#083c5a'
+          ],
           xAxis: { show: false },
           yAxis: { show: false },
           legend: { show: false },
           name: '收率',
           type: 'pie',
-          radius: ['60%', '70%'],
+          radius: ['60%', '75%'],
           avoidLabelOverlap: false,
           label: {
             show: false,
@@ -36,8 +43,8 @@ export default function Chart4 () {
             show: false
           },
           data: [
-            { value: 0.5, name: '收率' },
-            { value: 0.5, name: '未知' }
+            { value: 0.4, name: '收率' },
+            { value: 0.6, name: '未知' }
           ]
         }
       ]
@@ -48,7 +55,7 @@ export default function Chart4 () {
     <div className='yield-piechart'>
       <div className='chart'>
         <div ref={divRef} className='main' />
-        <div className='text'>50%</div>
+        <div className='text'>40%</div>
       </div>
       <div className='legend'>培训</div>
     </div>

@@ -16,13 +16,20 @@ export default function Chart4 () {
       series: [
         {
           ...BaseEchartsOptions,
-          color: ['#eb8146', '#083c5a'],
+          color: [
+            new echarts.graphic.LinearGradient(1, 0, 0, 1, [
+              { offset: 0, color: '#2f65f0' },
+
+              { offset: 1, color: '#9608ed' }
+            ]),
+            '#083c5a'
+          ],
           xAxis: { show: false },
           yAxis: { show: false },
           legend: { show: false },
           name: '收率',
           type: 'pie',
-          radius: ['60%', '70%'],
+          radius: ['60%', '75%'],
           avoidLabelOverlap: false,
           label: {
             show: false,

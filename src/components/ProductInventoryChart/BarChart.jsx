@@ -2,12 +2,26 @@ import React, { useRef, useEffect } from 'react'
 import * as echarts from 'echarts'
 import { px } from '../../shared/px'
 import { BaseEchartsOptions } from '../../shared/base-echarts-options'
-import './index.scss';
-
+import './index.scss'
+//'#3fb1e3''#6be6c1''#626c91''#a0a7e6''#c4ebad''#96dee8'
 export default function ProductInventoryChart () {
   const divRef = useRef(null)
+  const myChart = useRef(null)
   useEffect(() => {
-    var myChart = echarts.init(divRef.current)
+    setInterval(() => {
+      const newData = [
+        { name: '甲', value: Math.random() * 10 },
+        { name: '乙', value: Math.random() * 10 },
+        { name: '丙', value: Math.random() * 10 },
+        { name: '丁', value: Math.random() * 10 },
+        { name: '戊', value: Math.random() * 10 },
+        { name: '己', value: Math.random() * 10 }
+      ]
+      renderMyChart(newData)
+    }, 1000)
+  }, [])
+
+  const renderMyChart = data => {
     var options = {
       ...BaseEchartsOptions,
       grid: {
@@ -17,16 +31,9 @@ export default function ProductInventoryChart () {
         y2: px(40)
       },
       xAxis: {
-        data: [
-          '兰州新区',
-          '兰州新区',
-          '兰州新区',
-          '兰州新区',
-          '兰州新区',
-          '兰州新区'
-        ],
+        data: data.map(i => i.name),
         axisLabel: {
-          fontSize: px(12),
+          fontSize: px(18),
           formatter (val) {
             if (val.length > 2) {
               const array = val.split('')
@@ -41,51 +48,14 @@ export default function ProductInventoryChart () {
       yAxis: {
         splitLine: { show: false },
         axisLabel: {
-          fontSize: px(12)
+          fontSize: px(18)
         }
       },
       color: ['#ffb248'],
       series: [
         {
           type: 'bar',
-          data: [
-            {
-              value: 150,
-              itemStyle: {
-                color: '#3fb1e3'
-              }
-            },
-            {
-              value: 110,
-              itemStyle: {
-                color: '#6be6c1'
-              }
-            },
-            {
-              value: 30,
-              itemStyle: {
-                color: '#626c91'
-              }
-            },
-            {
-              value: 170,
-              itemStyle: {
-                color: '#a0a7e6'
-              }
-            },
-            {
-              value: 80,
-              itemStyle: {
-                color: '#c4ebad'
-              }
-            },
-            {
-              value: 200,
-              itemStyle: {
-                color: '#96dee8'
-              }
-            },
-          ],
+          data: data.map(i => i.value),
           showBackground: true,
           backgroundStyle: {
             color: '#ffb24820'
@@ -93,7 +63,13 @@ export default function ProductInventoryChart () {
         }
       ]
     }
-    myChart.setOption(options)
+    myChart.current.setOption(options)
+  }
+
+  //初始化图标
+  useEffect(() => {
+    myChart.current = echarts.init(divRef.current) //对myChart的ref的初始化
+    renderMyChart([])
   }, [])
   return (
     <div className='bordered product-inventory-chart'>

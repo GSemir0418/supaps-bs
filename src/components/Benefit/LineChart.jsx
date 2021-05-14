@@ -5,8 +5,9 @@ import './index.scss'
 
 export default function LineChart () {
   const divRef = useRef(null)
-  useEffect(() => {
-    var myChart = echarts.init(divRef.current)
+  const myChart = useRef(null)
+
+  const renderMyChart = data => {
     var options = {
       textStyle: {
         fontSize: px(12),
@@ -21,7 +22,7 @@ export default function LineChart () {
       xAxis: {
         type: 'category',
         boundaryGap: false,
-        data: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24],
+        data: data.map(i=>i.name),
         splitLine: { show: true, lineStyle: { color: '#073E78' } },
         axisTick: { show: false },
         axisLine: { show: false }
@@ -37,23 +38,8 @@ export default function LineChart () {
       },
       series: [
         {
-          name: '故意伤人',
           type: 'line',
-          data: [
-            0.15,
-            0.13,
-            0.11,
-            0.13,
-            0.14,
-            0.15,
-            0.16,
-            0.18,
-            0.21,
-            0.19,
-            0.17,
-            0.16,
-            0.15
-          ],
+          data: data.map(i=>i.value),
           symbol: 'circle',
           symbolSize: px(12),
           lineStyle: { width: px(2) },
@@ -65,14 +51,39 @@ export default function LineChart () {
               },
               {
                 offset: 1,
-                color: '#eb8146'
+                color: '#e69d87'
               }
             ])
           }
         }
       ]
     }
-    myChart.setOption(options)
+    myChart.current.setOption(options)
+  }
+  //动态获取数据
+  useEffect(() => {
+    setInterval(() => {
+      const newData = [
+        { time: '1', value: Math.random() },
+        { time: '2', value: Math.random() },
+        { time: '3', value: Math.random() },
+        { time: '4', value: Math.random() },
+        { time: '5', value: Math.random() },
+        { time: '6', value: Math.random() },
+        { time: '7', value: Math.random() },
+        { time: '8', value: Math.random() },
+        { time: '9', value: Math.random() },
+        { time: '10', value: Math.random() },
+        { time: '11', value: Math.random() },
+        { time: '12', value: Math.random() }
+      ]
+      renderMyChart(newData)
+    }, 1500)
+  }, [])
+  //初始化数据
+  useEffect(() => {
+    myChart.current = echarts.init(divRef.current)
+    renderMyChart([])
   }, [])
   return (
     <div className='bordered benefit'>

@@ -1,10 +1,11 @@
 import React from 'react'
+import inventory from '../../assets/img/inventory.png';
 import './index.scss'
 
 export default function index () {
   return (
     <div className='bordered inventory-cost'>
-      <h2>库存成本</h2>
+      <h2><img src={inventory} alt=''/> 库存成本</h2>
       <table className='inventory-cost-t'>
         <tbody>
           <tr>

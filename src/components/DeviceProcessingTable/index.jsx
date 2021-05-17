@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import DeviceProcess from '../../api/deviceProcess'
+import table from '../../assets/img/table.png';
 import './index.scss'
 // =39fa16ee-03c2-2359-3725-6fcd0e873cfb&FlowsheetId=39fa16ee-b3a0-d6a9-36c3-f1fd76ee02b7&ProcessingId=39fa2c14-7fcc-f4f4-84a4-aa546337e6d7
 export default function DeviceProcessingTable () {
@@ -50,7 +51,7 @@ export default function DeviceProcessingTable () {
 
   return (
     <div className='bordered deviceprocessing-t'>
-      <h2>装置加工表</h2>
+      <h2><img src={table} alt=''/> 装置加工表</h2>
       <div className='tablebox'>
         <div className='tb1-header'>
           <table>

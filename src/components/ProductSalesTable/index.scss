@@ -18,37 +18,89 @@
     line-height: px(24);
     padding: px(10) px(28);
     text-shadow: 0 0 px(2) rgb(218, 210, 210);
+    img {
+      width: px(22);
+      height: px(22);
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
   }
-  > table {
-    width: 96%;
-    margin: px(10) px(50);
+  table {
+    width: 100%;
+    margin: 0 px(10);
     border-collapse: collapse;
     font-size: px(18);
-    th,
     td {
       border: 0px;
       color: rgb(152, 195, 243);
     }
-    thead {
-      th {
-        color: rgb(95, 166, 248);
-        height: px(50);
-        background: #633ad3d2;
-      }
-    }
     tbody {
       tr:nth-child(even) {
-       // background: #143c53;
-       background: #361dc565;
+        background: #361dc565;
       }
       td {
         height: px(50);
-        width: px(84);
+        width: px(111);
         //background: #3e85ad;
       }
     }
   }
   table::-webkit-scrollbar {
     display: none;
+  }
+}
+.tablebox {
+  font-size: px(18);
+  height: px(900);
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: px(465);
+
+  //固定的标题部分
+  .tb1-header {
+    width: 96%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: px(10);
+    left: px(10);
+    z-index: 999;
+    pointer-events: none;
+    color: rgb(95, 166, 248);
+    height: px(50);
+    // background: #196591;
+    background: #633ad3d2;
+  }
+
+  //tbody表格部分
+  .tb1-body {
+    width: 100%;
+    position: absolute;
+    top: px(50);
+    left: 0;
+    .parent {
+      //table wrapper
+      height: px(900);
+      display: block !important;
+      overflow-y: scroll;
+      -ms-overflow-style: none;
+    }
+    .parent::-webkit-scrollbar {
+      display: none;
+    }
+    /*设置的子盒子高度大于父盒子，产生溢出效果*/
+    .child {
+      //tbody childdom1
+      height: auto;
+      width: px(500);
+      // width: 300px !important;
+    }
+    .child tr {
+      height: 100%;
+      margin: px(2) 0;
+      width: 100%;
+    }
   }
 }

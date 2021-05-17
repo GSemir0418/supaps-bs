@@ -5,7 +5,7 @@ let baseUrl = '127.0.0.1:8080/'; // 这里是一个默认的url，可以没有
 switch (process.env.NODE_ENV) {
   case 'development':
 
-    baseUrl = '192.168.94.113:81/';
+    baseUrl = '192.168.94.20:81/';
     // 开发环境url
 
     break;

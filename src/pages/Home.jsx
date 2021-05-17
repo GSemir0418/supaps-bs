@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.scss'
 import headerBg from '../assets/img/header.png'
+import yieldIcon from '../assets/img/yield.png';
 import DeviceProcessingTable from '../components/DeviceProcessingTable'
 import PieChart1 from '../components/Yield/PieChart1'
 import PieChart2 from '../components/Yield/PieChart2'
@@ -25,7 +26,7 @@ export default function Home () {
         </section>
         <section className='section3'>
           <div className='bordered yield'>
-            <h2>收率</h2>
+            <h2><img src={yieldIcon} alt=''/> 收率</h2>
             <div className='charts'>
               <PieChart1 />
               <PieChart2 />

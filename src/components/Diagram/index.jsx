@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import * as echarts from 'echarts'
 import { px } from '../../shared/px'
 import { BaseEchartsOptions } from '../../shared/base-echarts-options'
+import diagramIcon from '../../assets/img/diagram.png';
 import './index.scss'
 
 export default function Chart7 () {
@@ -295,7 +296,7 @@ export default function Chart7 () {
   }, [])
   return (
     <div className='diagram'>
-      <h2>双代号时标网络图</h2>
+      <h2><img src={diagramIcon} alt=''/> 双代号时标网络图</h2>
       <div ref={divRef} className='chart'></div>
     </div>
   )

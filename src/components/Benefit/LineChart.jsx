@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import * as echarts from 'echarts'
 import { px } from '../../shared/px'
+import line from '../../assets/img/line.png';
 import './index.scss'
 
 export default function LineChart () {
@@ -86,7 +87,7 @@ export default function LineChart () {
   }, [])
   return (
     <div className='bordered benefit'>
-      <h2>效益</h2>
+      <h2><img src={line} alt=''/> 效益</h2>
       <div ref={divRef} className='chart'></div>
     </div>
   )

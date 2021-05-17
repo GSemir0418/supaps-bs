@@ -44,7 +44,7 @@ export default function LineChart () {
           symbol: 'circle',
           symbolSize: px(12),
           itemStyle: {
-            color: '#a0a7e6'
+            color: '#2f65f0'
           },
           lineStyle: { width: px(2) },
           areaStyle: {
@@ -77,7 +77,7 @@ export default function LineChart () {
         { month: '12', value: Math.random() }
       ]
       renderMyChart(newData)
-    }, 2000)
+    }, 1500)
   }, [])
   //初始化数据
   useEffect(() => {

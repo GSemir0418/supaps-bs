@@ -7,7 +7,8 @@ import PieChart1 from '../components/Yield/PieChart1'
 import PieChart2 from '../components/Yield/PieChart2'
 import PieChart3 from '../components/Yield/PieChart3'
 import BarChart from '../components/ProductInventoryChart/BarChart'
-import Diagram from '../components/Diagram'
+import TestModel from '../components/Models/TestModel';
+// import Diagram from '../components/Diagram'
 import ProductSalesTable from '../components/ProductSalesTable'
 import LineChart from '../components/Benefit/LineChart'
 import ProductInventory from '../components/ProductInventory'
@@ -41,7 +42,8 @@ export default function Home () {
           <ProductSalesTable />
         </section>
         <section className='section6'>
-          <Diagram />
+          {/* <Diagram /> */}
+          <TestModel/>
         </section>
         <section className='section7'>
           <InventoryCost/>

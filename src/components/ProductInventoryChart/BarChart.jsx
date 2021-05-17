@@ -67,12 +67,9 @@ export default function ProductInventoryChart () {
           type: 'bar',
           data: data.map(i => i.value),
           showBackground: true,
-          // itemStyle: {
-          //   color: data.map(i => i.color)
-          // },
+          
           backgroundStyle: {
             color: '#0a529920'
-            // color: data.map(i => i.color)
           }
         }
       ]

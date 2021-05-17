@@ -1,6 +1,6 @@
 import React from 'react'
 import './Home.scss'
-import headerBg from '../img/header.png'
+import headerBg from '../assets/img/header.png'
 import DeviceProcessingTable from '../components/DeviceProcessingTable'
 import PieChart1 from '../components/Yield/PieChart1'
 import PieChart2 from '../components/Yield/PieChart2'

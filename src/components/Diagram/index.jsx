@@ -294,7 +294,7 @@ export default function Chart7 () {
     }
   }, [])
   return (
-    <div className='bordered diagram'>
+    <div className='diagram'>
       <h2>双代号时标网络图</h2>
       <div ref={divRef} className='chart'></div>
     </div>

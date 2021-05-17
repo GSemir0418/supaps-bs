@@ -51,14 +51,14 @@ export default function ProductInventoryChart () {
           fontSize: px(18)
         }
       },
-      color: ['#ffb248'],
+      color: ['#562ccad2'],
       series: [
         {
           type: 'bar',
           data: data.map(i => i.value),
           showBackground: true,
           backgroundStyle: {
-            color: '#ffb24820'
+            color: '#0a529920'
           }
         }
       ]

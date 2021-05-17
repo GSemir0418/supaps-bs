@@ -7,8 +7,8 @@
   text-align: center;
   align-items: center;
   h2 {
-    background: #196591;
-    color: #d6e4ec;
+    background: #19659162;
+    color: #85d0fc;
     flex-shrink: 0;
     border: 1px solid #0a5299;
     border-radius: 0 0 px(20) px(20);
@@ -31,7 +31,7 @@
     }
     tbody {
       tr:nth-child(even) {
-        background: #143c53;
+        background: #361dc565;
       }
       td {
         height: px(50);
@@ -55,13 +55,14 @@
     position: absolute;
     display: flex;
     align-items: center;
-    top: 0;
+    top: px(10);
     left: px(10);
     z-index: 999;
     pointer-events: none;
     color: rgb(95, 166, 248);
     height: px(50);
-    background: #196591;
+    // background: #196591;
+    background: #633ad3d2;
   }
 
   //tbody表格部分

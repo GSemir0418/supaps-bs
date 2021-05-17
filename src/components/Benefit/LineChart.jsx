@@ -22,7 +22,7 @@ export default function LineChart () {
       xAxis: {
         type: 'category',
         boundaryGap: false,
-        data: data.map(i=>i.month),
+        data: data.map(i => i.month),
         splitLine: { show: true, lineStyle: { color: '#073E78' } },
         axisTick: { show: false },
         axisLine: { show: false }
@@ -39,23 +39,19 @@ export default function LineChart () {
       series: [
         {
           type: 'line',
-          data: data.map(i=>i.value),
+          smooth: true,
+          data: data.map(i => i.value),
           symbol: 'circle',
           symbolSize: px(12),
-          itemStyle:{
-            color:'#eedd78'
+          itemStyle: {
+            color: '#a0a7e6'
           },
           lineStyle: { width: px(2) },
           areaStyle: {
             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-              {
-                offset: 0,
-                color: '#ebdba4'
-              },
-              {
-                offset: 1,
-                color: '#e69d87'
-              }
+              { offset: 0, color: '#9608ed' },
+
+              { offset: 1, color: '#2f65f0' }
             ])
           }
         }

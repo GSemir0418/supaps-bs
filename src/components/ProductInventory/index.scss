@@ -18,7 +18,7 @@
     grid-area: yl1;
     position: relative;
     display: flex;
-    flex-direction: column; //加上这两句居然解决了与上面部分间距的问题！
+    flex-direction: column;
     height: px(142.5);
     .yuanliao {
       position: absolute;
@@ -30,12 +30,12 @@
     .spin {
       background: transparent;
       border-radius: 50%;
-      box-shadow: inset px(5) px(-2) rgb(104, 164, 255);
+      box-shadow: inset px(3) px(-2) rgb(81, 48, 202);
       animation: spin 1s linear infinite;
       filter: blur(px(2));
     }
     .spin1 {
-      box-shadow: inset px(5) px(-2) rgb(120, 240, 248);
+      box-shadow: inset px(3) px(-2) rgb(24, 57, 241);
       animation: spin1 1s linear infinite;
       top: px(30);
       left: px(20);
@@ -67,8 +67,8 @@
     grid-area: yl4;
   }
   h2 {
-    background: #196591;
-    color: #d6e4ec;
+    background: #19659162;
+    color: #85d0fc;
     flex-shrink: 0;
     border: 1px solid #0a5299;
     border-radius: 0 0 px(20) px(20);

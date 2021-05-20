@@ -1,0 +1,9 @@
+.contrastline {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  .linechart {
+    flex: 1;
+    height: 100%;
+  }
+}

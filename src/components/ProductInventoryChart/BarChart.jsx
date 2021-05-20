@@ -77,7 +77,7 @@ export default function ProductInventoryChart () {
     myChart.current.setOption(options)
   }
 
-  //初始化图标
+  //初始化图表
   useEffect(() => {
     myChart.current = echarts.init(divRef.current) //对myChart的ref的初始化
     renderMyChart([])

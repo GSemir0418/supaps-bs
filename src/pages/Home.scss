@@ -66,7 +66,7 @@
           -10px 0 0 -8px #0d4483, 0 10px 0 -8px #0d4483, 0 -10px 0 -8px #0d4483;
       }
       h2 {
-        width:px(200);
+        width:px(300);
         margin:0 auto;
         background: #19659162;
         color: #85d0fc;
@@ -112,6 +112,8 @@
     }
     > .section6 {
       grid-area: box6;
+      display: flex;
+      flex-direction: column;
     }
     > .section7 {
       grid-area: box7;

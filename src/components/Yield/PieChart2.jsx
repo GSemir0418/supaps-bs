@@ -58,7 +58,7 @@ export default function Chart4 () {
         <div ref={divRef} className='main' />
         <div className='text'>50%</div>
       </div>
-      <div className='legend'>营销</div>
+      <div className='legend'>丙烯</div>
     </div>
   )
 }

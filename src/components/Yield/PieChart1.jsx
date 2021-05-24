@@ -50,7 +50,7 @@ export default function Chart3 () {
         <div ref={divRef} className='main' />
         <div className='text'>70%</div>
       </div>
-      <div className='legend'>业务</div>
+      <div className='legend'>乙烯</div>
     </div>
   )
 }

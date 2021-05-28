@@ -19,12 +19,12 @@ export default function ProductInventoryChart () {
   useEffect(() => {
     setInterval(() => {
       const newData = [
-        { name: '甲', value: Math.random() * 10, color: 'red' },
-        { name: '乙', value: Math.random() * 10, color: 'green' },
-        { name: '丙', value: Math.random() * 10, color: 'blue' },
-        { name: '丁', value: Math.random() * 10, color: 'pink' },
-        { name: '戊', value: Math.random() * 10, color: '#FFFFFF' },
-        { name: '己', value: Math.random() * 10, color: '#FFFFFF' }
+        { name: '甲', value: Math.random() * 10 },
+        { name: '乙', value: Math.random() * 10 },
+        { name: '丙', value: Math.random() * 10 },
+        { name: '丁', value: Math.random() * 10 },
+        { name: '戊', value: Math.random() * 10 },
+        { name: '己', value: Math.random() * 10 }
       ]
       renderMyChart(newData)
     }, 1000)
@@ -67,7 +67,7 @@ export default function ProductInventoryChart () {
           type: 'bar',
           data: data.map(i => i.value),
           showBackground: true,
-          
+
           backgroundStyle: {
             color: '#0a529920'
           }

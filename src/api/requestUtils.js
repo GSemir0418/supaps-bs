@@ -5,8 +5,7 @@ class RequestUtils {
       if ({}.hasOwnProperty.call(data, k)) {
         s += `${k}=${data[k]}&`;
       }
-    }
-    if (s === '') {
+    }if (s === '') {
       return '';
     }
     s = s.substring(0, s.length - 1);

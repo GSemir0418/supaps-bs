@@ -37,7 +37,7 @@
     }
     tbody {
       tr:nth-child(even) {
-        background: #361dc565;
+        background: #00808065;
       }
       td {
         height: px(50);
@@ -68,10 +68,10 @@
     left: px(10);
     z-index: 999;
     pointer-events: none;
-    color: rgb(95, 166, 248);
+    color: #ffffffd8;
     height: px(50);
     // background: #196591;
-    background: #633ad3d2;
+    background:	#20B2AAd2;
   }
 
   //tbody表格部分

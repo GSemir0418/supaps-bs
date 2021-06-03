@@ -50,9 +50,9 @@ export default function LineChart () {
           lineStyle: { width: px(2) },
           areaStyle: {
             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-              { offset: 0, color: '#9608ed' },
+              { offset: 0, color: '#FFD700' },
 
-              { offset: 1, color: '#2f65f0' }
+              { offset: 1, color: '#FFEFD5' }
             ])
           }
         }

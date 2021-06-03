@@ -7,14 +7,14 @@ import axios from './plugins/axios'
 window.axios = axios;
 ReactDOM.render(
   <React.StrictMode>
-    {/* <ReactParticleLine
+    <ReactParticleLine
       lineWidth={0.1}
-      dotsNumber={80}
+      dotsNumber={100}
       dotsDistance={30}
-      hoverEffect={true}> */}
+      hoverEffect={false}>
       <App >
       </App>
-    {/* </ReactParticleLine> */}
+    </ReactParticleLine>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -15,9 +15,9 @@ export default function Chart3 () {
           ...BaseEchartsOptions,
           color: [
             new echarts.graphic.LinearGradient(1, 0, 0, 1, [
-              { offset: 0, color: '#2f65f0' },
+              { offset: 0, color: '#48D1CC' },
 
-              { offset: 1, color: '#9608ed' }
+              { offset: 1, color: '#FF8C00' }
             ]),
             '#083c5a'
           ],
@@ -36,8 +36,8 @@ export default function Chart3 () {
             show: false
           },
           data: [
-            { value: 0.7, name: '收率' },
-            { value: 0.3, name: '未知' }
+            { value: 0.992, name: '收率' },
+            { value: 0.008, name: '未知' }
           ]
         }
       ]
@@ -48,9 +48,9 @@ export default function Chart3 () {
     <div className='yield-piechart'>
       <div className='chart'>
         <div ref={divRef} className='main' />
-        <div className='text'>70%</div>
+        <div className='text'>99.2%</div>
       </div>
-      <div className='legend'>乙烯</div>
+      <div className='legend'>精甲醇</div>
     </div>
   )
 }

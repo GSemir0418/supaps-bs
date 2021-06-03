@@ -60,14 +60,23 @@ export default function ProductInventoryChart () {
           fontSize: px(18)
         }
       },
-      color: ['#562ccad2'],
+     
+      //color: ['#7FFFAAd2'],
       // color:data.map(i=>i.color),
       series: [
         {
           type: 'bar',
           data: data.map(i => i.value),
           showBackground: true,
-
+          itemStyle:{
+            color: new echarts.graphic.LinearGradient(
+              0, 0, 0, 1,
+              [
+                  {offset: 0, color: '#7FFFAAd2'},
+                  {offset: 1, color: '#188df0'}
+              ]
+          )
+          },
           backgroundStyle: {
             color: '#0a529920'
           }

@@ -31,12 +31,12 @@
     .spin {
       background: transparent;
       border-radius: 50%;
-      box-shadow: inset px(3) px(-2) rgb(81, 48, 202);
+      box-shadow: inset px(3) px(-2) #ca6130;
       animation: spin 1s linear infinite;
       filter: blur(px(2));
     }
     .spin1 {
-      box-shadow: inset px(3) px(-2) rgb(24, 57, 241);
+      box-shadow: inset px(3) px(-2) rgb(241, 227, 24);
       animation: spin1 1s linear infinite;
       top: px(35);
       left: px(22);

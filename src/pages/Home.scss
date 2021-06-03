@@ -33,6 +33,7 @@
     justify-content: center;
   }
   > main {
+    z-index: 1;
     width: px(1920);
     height: px(920);
     margin: 0 auto; //main元素居中
